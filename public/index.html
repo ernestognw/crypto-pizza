@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <!-- Snackbar -->
+  <div id="status"></div>
+
+  <!-- Loading -->
+  <div id="loading-container" class="container">
+    Loading...
+  </div>
+
+  <!-- Welcome -->
+  <div id="welcome-container" class="container hidden">
+    <h1>Welcome!</h1>
+    <h3 id="start-message">Please connect your metamask
+      account to begin.</h3>
+    <img src="/images/metamask.png" class="metamaks-logo" />
+    <div class="row">
+      <button class="btn mx-auto d-block" id="connect-button">Connect</button>
+    </div>
+  </div>
+
+  <!-- Main  -->
+  <div id="main-container" class="container hidden">
+    <!-- Header -->
+    <header>
+      <h1>CryptoPizza</h1>
+      <hr>
+    </header>
+
+    <!-- Navigation -->
+    <div class="tab">
+      <button id="create-tab" class="tablinks active">Create new</button>
+      <button id="inventory-tab" class="tablinks">Inventory</button>
+    </div>
+
+    <!-- Create section -->
+    <div id="create-tab-content" class="tabcontent">
+      <h2>Create new CryptoPizza</h2>
+
+      <div class="pizza-container">
+        <img class="pizza-frame" src="https://studio.ethereum.org/static/img/cryptopizza/container.jpg" />
+        <img src="https://studio.ethereum.org/static/img/cryptopizza/corpus.png" />
+        <!-- Ingredients images will be appended to this div -->
+        <div id="pizza-ingredients-container" class="ingredients"></div>
+      </div>
+
+      <div class="input-container">
+        <input type="text" id="create-input" placeholder="Enter name..." maxlength="20" />
+        <button class="btn" id="create-button">Create</button>
+      </div>
+    </div>
+
+    <!-- Inventory section -->
+    <div id="inventory-tab-content" class="tabcontent">
+      <h2>Your inventory</h2>
+      <!-- Pizza containers will be appended to this div -->
+      <div id="inventory-container" class="row inventory-list"></div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
